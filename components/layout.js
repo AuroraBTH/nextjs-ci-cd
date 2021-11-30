@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const name = 'Niklas Andersson';
@@ -24,14 +23,6 @@ export default function Layout({ children, home }) {
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <header className='p-4 mx-4'>
-                <Image
-                    priority
-                    src="/images/profile.jpg"
-                    className='rounded-full'
-                    height={144}
-                    width={144}
-                    alt={name}
-                />
                 <div className='pt-4'>
                     <Link href="/">
                         <a className='text-4xl'>{name}</a>
