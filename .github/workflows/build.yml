@@ -25,4 +25,5 @@ jobs:
           path: |
             ./
             !node_modules/
+            node_modules/next
           retention-days: 1
