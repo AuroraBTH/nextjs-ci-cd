@@ -49,8 +49,8 @@ jobs:
       
       - name: Unzip
         run: tar -xvf build.tar
-        run: pwd
-        run: ls -lah
+      - run: pwd
+      - run: ls -lah
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
