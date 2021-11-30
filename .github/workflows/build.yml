@@ -48,7 +48,7 @@ jobs:
           name: node-app
       
       - name: Unzip
-        run: tar -xvf build.tar
+        run: tar -xf build.tar
       - run: pwd
       - run: ls -lah
 
