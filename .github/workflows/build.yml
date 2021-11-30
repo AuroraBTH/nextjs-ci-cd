@@ -24,14 +24,14 @@ jobs:
       - run: npm ci
       - run: npm run lint --if-present
       - run: npm run build --if-present
-
-      - run: tar -cf build.tar ./
+      
+      - run: next export
 
       - name: Upload build output
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: build.tar
+          path: ./out
           retention-days: 1
 
   deploy:
@@ -46,11 +46,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: node-app
-      
-      - name: Unzip
-        run: tar -xf build.tar
-      - run: rm build.tar
-      - run: ls -lah
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
