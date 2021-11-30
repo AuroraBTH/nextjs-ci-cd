@@ -49,7 +49,7 @@ jobs:
       
       - name: Unzip
         run: tar -xf build.tar
-      - run: pwd
+      - run: rm build.tar
       - run: ls -lah
 
       - name: 'Deploy to Azure Web App'
