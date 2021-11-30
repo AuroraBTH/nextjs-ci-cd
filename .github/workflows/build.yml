@@ -22,5 +22,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build-output
-          path: ./
+          path: |
+            ./
+            !node_modules/
           retention-days: 1
