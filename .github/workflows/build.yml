@@ -18,12 +18,10 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
+      - run: tar -cf test.tar ./
       - name: Upload build output
         uses: actions/upload-artifact@v2
         with:
           name: build-output
-          path: |
-            ./
-            !node_modules/
-            node_modules/next
+          path: test.tar
           retention-days: 1
