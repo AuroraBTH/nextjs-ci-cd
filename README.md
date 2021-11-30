@@ -1,1 +1,1 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+This is a repository for learning Next.js as well as CI/CD with Github Actions/Azure DevOps.
